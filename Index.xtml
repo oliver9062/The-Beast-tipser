@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THE BEAST TIPSER - OFFICIAL</title>
+<title>THE BEAST TIPSER</title>
+
 <style>
 *{box-sizing:border-box}
 
@@ -18,9 +19,6 @@ header{
 background:#101010;
 border-bottom:1px solid #292929;
 padding:18px;
-position:sticky;
-top:0;
-z-index:10;
 }
 
 .nav{
@@ -32,9 +30,8 @@ align-items:center;
 }
 
 .logo{
-font-size:22px;
+font-size:23px;
 font-weight:900;
-letter-spacing:1px;
 }
 
 .logo span{
@@ -54,11 +51,11 @@ margin:30px auto;
 padding:20px;
 }
 
-.hero-box{
+.heroBox{
 padding:45px 30px;
-border:1px solid #4a3a00;
+border:1px solid #4d3b00;
 border-radius:20px;
-background:linear-gradient(135deg,#181818,#0b0b0b);
+background:linear-gradient(135deg,#191919,#0b0b0b);
 }
 
 .badge{
@@ -66,7 +63,7 @@ display:inline-block;
 background:#f5b400;
 color:#111;
 font-weight:bold;
-padding:8px 12px;
+padding:8px 13px;
 border-radius:20px;
 font-size:12px;
 }
@@ -230,7 +227,7 @@ grid-template-columns:1fr;
 grid-template-columns:1fr 1fr;
 }
 
-.hero-box{
+.heroBox{
 padding:30px 20px;
 }
 
@@ -258,10 +255,9 @@ THE <span>BEAST</span> TIPSER
 
 </header>
 
-
 <section class="hero">
 
-<div class="hero-box">
+<div class="heroBox">
 
 <span class="badge">🔥 DAILY FOOTBALL TIPS</span>
 
@@ -282,7 +278,6 @@ THE BEAST <span>TIPSER</span>
 
 </section>
 
-
 <main>
 
 <section id="tips">
@@ -295,9 +290,7 @@ THE BEAST <span>TIPSER</span>
 
 </div>
 
-
 <div class="grid">
-
 
 <div class="card">
 
@@ -391,7 +384,6 @@ Confidence 8/10
 
 </div>
 
-
 </div>
 
 </section>
@@ -470,7 +462,6 @@ Confidence 8/10
 </section>
 
 </main>
-
 
 <footer>
 

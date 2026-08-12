@@ -1,135 +1,325 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THE BEAST TIPSTER</title>
+
+<title>THE BEAST TIPSTER | Zvanična stranica</title>
 
 <style>
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #080808;
-    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #070707;
+    color: #fff;
 }
 
+/* HEADER */
+
 header {
-    background: #111;
-    padding: 25px 15px;
-    text-align: center;
-    border-bottom: 2px solid #d4af37;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(7,7,7,0.96);
+    border-bottom: 1px solid #d4af37;
+    padding: 18px 20px;
+}
+
+.nav {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
     color: #d4af37;
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 3px;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
 
-.subtitle {
-    color: #aaa;
-    margin-top: 8px;
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
     font-size: 14px;
 }
 
-.hero {
-    text-align: center;
-    padding: 70px 20px;
-    background: radial-gradient(circle, #302600, #080808 65%);
-}
-
-.hero h1 {
-    font-size: 45px;
-    margin-bottom: 15px;
-}
-
-.hero h1 span {
+nav a:hover {
     color: #d4af37;
 }
 
+/* HERO */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background:
+        radial-gradient(circle at center, #3a2c00 0%, #111 35%, #070707 70%);
+}
+
+.beast {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.gold {
+    color: #d4af37;
+}
+
+.hero h2 {
+    color: #ddd;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
 .hero p {
-    color: #bbb;
-    font-size: 18px;
-    margin-bottom: 30px;
+    max-width: 650px;
+    margin: auto;
+    color: #aaa;
+    font-size: 17px;
+    line-height: 1.6;
 }
 
 .button {
     display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
     background: #d4af37;
     color: #000;
-    padding: 15px 28px;
-    border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 900;
+    border-radius: 8px;
 }
+
+.button:hover {
+    background: #f0d76a;
+}
+
+/* SECTIONS */
 
 .container {
-    max-width: 1100px;
+    max-width: 1150px;
     margin: auto;
-    padding: 45px 20px;
+    padding: 70px 20px;
 }
 
-.title {
+.section-title {
     text-align: center;
-    color: #d4af37;
-    font-size: 28px;
-    margin-bottom: 30px;
+    font-size: 34px;
+    margin-bottom: 12px;
 }
+
+.section-subtitle {
+    text-align: center;
+    color: #999;
+    margin-bottom: 40px;
+}
+
+/* TIPS */
 
 .tips {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
 }
 
 .card {
-    background: #151515;
-    border: 1px solid #333;
-    border-radius: 12px;
+    background: linear-gradient(145deg, #181818, #0e0e0e);
+    border: 1px solid #292929;
+    border-radius: 15px;
     padding: 25px;
+    transition: 0.3s;
 }
 
-.card h3 {
-    margin-bottom: 15px;
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
 }
 
-.card p {
-    color: #aaa;
-    margin: 10px 0;
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.pick {
-    color: #d4af37 !important;
-    font-size: 20px;
+.sport {
+    color: #d4af37;
     font-weight: bold;
 }
 
+.status {
+    color: #55d66b;
+    font-size: 13px;
+}
+
+.match {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.info {
+    color: #aaa;
+    margin: 8px 0;
+}
+
+.prediction {
+    margin-top: 20px;
+    padding: 15px;
+    background: #211c0b;
+    border-left: 3px solid #d4af37;
+}
+
+.prediction strong {
+    color: #d4af37;
+    font-size: 18px;
+}
+
+.odds {
+    margin-top: 15px;
+    color: #ccc;
+}
+
+/* VIP */
+
 .vip {
-    margin-top: 50px;
-    text-align: center;
-    padding: 40px 20px;
+    background:
+        linear-gradient(135deg, #211b06, #0d0d0d);
     border: 1px solid #d4af37;
-    border-radius: 15px;
-    background: #171717;
+    border-radius: 20px;
+    padding: 55px 25px;
+    text-align: center;
+}
+
+.vip-icon {
+    font-size: 50px;
 }
 
 .vip h2 {
     color: #d4af37;
-    font-size: 32px;
-    margin-bottom: 15px;
+    font-size: 38px;
+    margin: 15px 0;
 }
 
-footer {
+.vip p {
+    color: #bbb;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* STATISTICS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.stat {
+    background: #141414;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    padding: 30px 15px;
     text-align: center;
-    padding: 30px;
-    background: #050505;
+}
+
+.stat-number {
+    color: #d4af37;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.stat-name {
+    color: #999;
+    margin-top: 8px;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    color: #aaa;
+    margin: 10px 0;
+}
+
+/* FOOTER */
+
+footer {
+    background: #030303;
+    border-top: 1px solid #222;
+    text-align: center;
+    padding: 35px 20px;
     color: #777;
+}
+
+footer strong {
+    color: #d4af37;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 520px;
+    }
+
+    .beast {
+        font-size: 55px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        letter-spacing: 2px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .tips {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 </style>
 </head>
@@ -137,56 +327,251 @@ footer {
 <body>
 
 <header>
-    <div class="logo">🦁 THE BEAST TIPSTER</div>
-    <div class="subtitle">OFFICIAL FOOTBALL TIPS</div>
+
+<div class="nav">
+
+<div class="logo">
+🦁 THE BEAST TIPSTER
+</div>
+
+<nav>
+<a href="#pocetna">Početna</a>
+<a href="#tipovi">Tipovi</a>
+<a href="#vip">VIP</a>
+<a href="#statistika">Statistika</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+
+</div>
+
 </header>
 
-<section class="hero">
-    <h1>WELCOME TO <span>THE BEAST</span></h1>
-    <p>Professional football predictions, statistics and daily picks.</p>
-    <a href="#tips" class="button">VIEW TODAY'S TIPS</a>
-</section>
 
-<section class="container" id="tips">
+<!-- POČETNA -->
 
-    <h2 class="title">🔥 TODAY'S TIPS</h2>
+<section class="hero" id="pocetna">
 
-    <div class="tips">
+<div>
 
-        <div class="card">
-            <h3>⚽ Football</h3>
-            <p>Match: Team A vs Team B</p>
-            <p class="pick">OVER 2.5</p>
-            <p>Confidence: 78%</p>
-        </div>
+<div class="beast">🦁</div>
 
-        <div class="card">
-            <h3>⚽ Football</h3>
-            <p>Match: Team C vs Team D</p>
-            <p class="pick">HOME WIN</p>
-            <p>Confidence: 81%</p>
-        </div>
+<h1>
+THE <span class="gold">BEAST</span> TIPSTER
+</h1>
 
-        <div class="card">
-            <h3>⚽ Football</h3>
-            <p>Match: Team E vs Team F</p>
-            <p class="pick">BOTH TEAMS TO SCORE</p>
-            <p>Confidence: 75%</p>
-        </div>
+<h2>
+ZVANIČNA STRANICA
+</h2>
 
-    </div>
+<p>
+Dobrodošli na The Beast Tipster.
+Pratite naše fudbalske selekcije, statistiku i premium VIP tipove.
+</p>
 
-    <div class="vip">
-        <h2>👑 VIP BEAST</h2>
-        <p>Exclusive premium football selections coming soon.</p>
-        <br>
-        <a href="#" class="button">VIP COMING SOON</a>
-    </div>
+<a class="button" href="#tipovi">
+POGLEDAJ DANAŠNJE TIPOVE
+</a>
+
+</div>
 
 </section>
+
+
+<!-- TIPOVI -->
+
+<section class="container" id="tipovi">
+
+<h2 class="section-title">
+🔥 DANAŠNJI TIPOVI
+</h2>
+
+<p class="section-subtitle">
+Najnovije selekcije The Beast Tipster tima
+</p>
+
+
+<div class="tips">
+
+
+<div class="card">
+
+<div class="card-top">
+<span class="sport">⚽ FUDBAL</span>
+<span class="status">● AKTIVNO</span>
+</div>
+
+<div class="match">
+Tim A vs Tim B
+</div>
+
+<div class="info">
+🕐 Vreme: 20:45
+</div>
+
+<div class="prediction">
+<p>Predlog:</p>
+<strong>VIŠE OD 2.5 GOLOVA</strong>
+</div>
+
+<div class="odds">
+📈 Koeficijent: 1.80
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-top">
+<span class="sport">⚽ FUDBAL</span>
+<span class="status">● AKTIVNO</span>
+</div>
+
+<div class="match">
+Tim C vs Tim D
+</div>
+
+<div class="info">
+🕐 Vreme: 21:00
+</div>
+
+<div class="prediction">
+<p>Predlog:</p>
+<strong>POBEDA DOMAĆINA</strong>
+</div>
+
+<div class="odds">
+📈 Koeficijent: 1.75
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-top">
+<span class="sport">⚽ FUDBAL</span>
+<span class="status">● AKTIVNO</span>
+</div>
+
+<div class="match">
+Tim E vs Tim F
+</div>
+
+<div class="info">
+🕐 Vreme: 21:30
+</div>
+
+<div class="prediction">
+<p>Predlog:</p>
+<strong>OBA TIMA DAJU GOL</strong>
+</div>
+
+<div class="odds">
+📈 Koeficijent: 1.70
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- VIP -->
+
+<section class="container" id="vip">
+
+<div class="vip">
+
+<div class="vip-icon">👑</div>
+
+<h2>BEAST VIP</h2>
+
+<p>
+Premium selekcije za članove The Beast VIP zajednice.
+Dobijajte posebne tipove, analize i ekskluzivne selekcije.
+</p>
+
+<a class="button" href="#kontakt">
+PRIDRUŽI SE VIP
+</a>
+
+</div>
+
+</section>
+
+
+<!-- STATISTIKA -->
+
+<section class="container" id="statistika">
+
+<h2 class="section-title">
+📊 STATISTIKA
+</h2>
+
+<p class="section-subtitle">
+Rezultati The Beast Tipster selekcija
+</p>
+
+
+<div class="stats">
+
+<div class="stat">
+<div class="stat-number">--%</div>
+<div class="stat-name">Uspešnost</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">--</div>
+<div class="stat-name">Ukupno tipova</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">--</div>
+<div class="stat-name">Dobitni tipovi</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">--</div>
+<div class="stat-name">Profit</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- KONTAKT -->
+
+<section class="container contact" id="kontakt">
+
+<h2 class="section-title">
+📩 KONTAKT
+</h2>
+
+<p>
+Za VIP članstvo i dodatne informacije kontaktirajte The Beast Tipster.
+</p>
+
+<a class="button" href="#">
+KONTAKTIRAJ NAS
+</a>
+
+</section>
+
 
 <footer>
-    © 2026 THE BEAST TIPSTER — OFFICIAL
+
+<p>
+© 2026 <strong>THE BEAST TIPSTER</strong>
+</p>
+
+<p>
+Zvanična stranica • Fudbalske selekcije
+</p>
+
 </footer>
 
 </body>

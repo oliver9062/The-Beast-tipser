@@ -1,324 +1,466 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html lang="sl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>THE BEAST TIPSTER | Zvanična stranica</title>
+<title>Premium Montaža Oken in Vrat | Ljubljana</title>
+
+<meta name="description"
+content="Profesionalna montaža PVC in ALU oken, vhodnih in notranjih vrat ter komarnikov. Ljubljana in okolica. Pokličite 069 746 529.">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #070707;
-    color: #fff;
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#0b0b0b;
+    color:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
 /* HEADER */
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(7,7,7,0.96);
-    border-bottom: 1px solid #d4af37;
-    padding: 18px 20px;
+header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10;
+    padding:25px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.nav {
-    max-width: 1150px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.logo{
+    font-size:23px;
+    font-weight:800;
+    letter-spacing:2px;
 }
 
-.logo {
-    color: #d4af37;
-    font-size: 24px;
-    font-weight: 900;
-    letter-spacing: 2px;
+.logo span{
+    color:#d4af37;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 14px;
+nav{
+    display:flex;
+    gap:28px;
+    font-size:14px;
 }
 
-nav a:hover {
-    color: #d4af37;
+nav a:hover{
+    color:#d4af37;
 }
 
 /* HERO */
 
-.hero {
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 80px 20px;
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:120px 7% 80px;
+    position:relative;
+
     background:
-        radial-gradient(circle at center, #3a2c00 0%, #111 35%, #070707 70%);
+    linear-gradient(90deg,
+    rgba(0,0,0,.88),
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.25)),
+    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=90");
+
+    background-size:cover;
+    background-position:center;
 }
 
-.beast {
-    font-size: 70px;
-    margin-bottom: 10px;
+.hero-content{
+    max-width:850px;
 }
 
-.hero h1 {
-    font-size: 56px;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
+.small-title{
+    color:#d4af37;
+    font-weight:bold;
+    letter-spacing:4px;
+    font-size:14px;
+    margin-bottom:20px;
 }
 
-.gold {
-    color: #d4af37;
+.hero h1{
+    font-size:clamp(42px,7vw,82px);
+    line-height:1.02;
+    margin-bottom:25px;
 }
 
-.hero h2 {
-    color: #ddd;
-    font-size: 22px;
-    margin-bottom: 15px;
+.hero h1 span{
+    color:#d4af37;
 }
 
-.hero p {
-    max-width: 650px;
-    margin: auto;
-    color: #aaa;
-    font-size: 17px;
-    line-height: 1.6;
+.hero p{
+    font-size:20px;
+    color:#ddd;
+    max-width:700px;
+    margin-bottom:35px;
 }
 
-.button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 15px 30px;
-    background: #d4af37;
-    color: #000;
-    text-decoration: none;
-    font-weight: 900;
-    border-radius: 8px;
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
-.button:hover {
-    background: #f0d76a;
+.btn{
+    display:inline-block;
+    padding:16px 28px;
+    border-radius:4px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-gold{
+    background:#d4af37;
+    color:#111;
+}
+
+.btn-gold:hover{
+    background:#f0cf55;
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border:1px solid #d4af37;
+    color:#fff;
+}
+
+.btn-outline:hover{
+    background:#d4af37;
+    color:#111;
 }
 
 /* SECTIONS */
 
-.container {
-    max-width: 1150px;
-    margin: auto;
-    padding: 70px 20px;
+section{
+    padding:100px 7%;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 34px;
-    margin-bottom: 12px;
+.section-title{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 55px;
 }
 
-.section-subtitle {
-    text-align: center;
-    color: #999;
-    margin-bottom: 40px;
+.section-title .gold{
+    color:#d4af37;
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:4px;
 }
 
-/* TIPS */
-
-.tips {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+.section-title h2{
+    font-size:45px;
+    margin:12px 0;
 }
 
-.card {
-    background: linear-gradient(145deg, #181818, #0e0e0e);
-    border: 1px solid #292929;
-    border-radius: 15px;
-    padding: 25px;
-    transition: 0.3s;
+.section-title p{
+    color:#aaa;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #d4af37;
+/* SERVICES */
+
+.services{
+    background:#111;
 }
 
-.card-top {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    max-width:1250px;
+    margin:auto;
 }
 
-.sport {
-    color: #d4af37;
-    font-weight: bold;
+.card{
+    background:#181818;
+    border:1px solid #292929;
+    overflow:hidden;
+    transition:.35s;
 }
 
-.status {
-    color: #55d66b;
-    font-size: 13px;
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#d4af37;
 }
 
-.match {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 18px;
+.card-image{
+    height:230px;
+    overflow:hidden;
 }
 
-.info {
-    color: #aaa;
-    margin: 8px 0;
+.card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
 }
 
-.prediction {
-    margin-top: 20px;
-    padding: 15px;
-    background: #211c0b;
-    border-left: 3px solid #d4af37;
+.card:hover img{
+    transform:scale(1.06);
 }
 
-.prediction strong {
-    color: #d4af37;
-    font-size: 18px;
+.card-content{
+    padding:28px;
 }
 
-.odds {
-    margin-top: 15px;
-    color: #ccc;
+.card-content h3{
+    font-size:24px;
+    margin-bottom:12px;
 }
 
-/* VIP */
+.card-content h3 span{
+    color:#d4af37;
+}
 
-.vip {
+.card-content p{
+    color:#aaa;
+}
+
+/* PREMIUM */
+
+.premium{
+    background:#0b0b0b;
+}
+
+.premium-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.premium-image img{
+    width:100%;
+    height:550px;
+    object-fit:cover;
+}
+
+.premium-text .gold{
+    color:#d4af37;
+    font-weight:bold;
+    letter-spacing:4px;
+    font-size:14px;
+}
+
+.premium-text h2{
+    font-size:48px;
+    line-height:1.1;
+    margin:15px 0 25px;
+}
+
+.premium-text p{
+    color:#aaa;
+    margin-bottom:20px;
+}
+
+.features{
+    margin-top:30px;
+}
+
+.feature{
+    display:flex;
+    gap:15px;
+    margin-bottom:18px;
+}
+
+.feature-icon{
+    color:#d4af37;
+    font-size:20px;
+}
+
+.feature strong{
+    display:block;
+}
+
+.feature span{
+    color:#999;
+    font-size:14px;
+}
+
+/* PROCESS */
+
+.process{
+    background:#151515;
+}
+
+.process-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.process-box{
+    text-align:center;
+    padding:30px 15px;
+}
+
+.number{
+    width:55px;
+    height:55px;
+    border:1px solid #d4af37;
+    color:#d4af37;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 20px;
+    font-weight:bold;
+}
+
+.process-box h3{
+    margin-bottom:10px;
+}
+
+.process-box p{
+    color:#999;
+    font-size:14px;
+}
+
+/* CTA */
+
+.cta{
+    text-align:center;
     background:
-        linear-gradient(135deg, #211b06, #0d0d0d);
-    border: 1px solid #d4af37;
-    border-radius: 20px;
-    padding: 55px 25px;
-    text-align: center;
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+    url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2000&q=90");
+    background-size:cover;
+    background-position:center;
 }
 
-.vip-icon {
-    font-size: 50px;
+.cta h2{
+    font-size:50px;
+    margin-bottom:15px;
 }
 
-.vip h2 {
-    color: #d4af37;
-    font-size: 38px;
-    margin: 15px 0;
+.cta p{
+    color:#ccc;
+    margin-bottom:25px;
 }
 
-.vip p {
-    color: #bbb;
-    max-width: 650px;
-    margin: auto;
-    line-height: 1.6;
-}
-
-/* STATISTICS */
-
-.stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-}
-
-.stat {
-    background: #141414;
-    border: 1px solid #292929;
-    border-radius: 12px;
-    padding: 30px 15px;
-    text-align: center;
-}
-
-.stat-number {
-    color: #d4af37;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.stat-name {
-    color: #999;
-    margin-top: 8px;
-}
-
-/* CONTACT */
-
-.contact {
-    text-align: center;
-}
-
-.contact p {
-    color: #aaa;
-    margin: 10px 0;
+.phone{
+    font-size:38px;
+    font-weight:bold;
+    color:#d4af37;
+    margin-bottom:25px;
 }
 
 /* FOOTER */
 
-footer {
-    background: #030303;
-    border-top: 1px solid #222;
-    text-align: center;
-    padding: 35px 20px;
-    color: #777;
+footer{
+    background:#050505;
+    padding:35px 7%;
+    text-align:center;
+    color:#777;
+    font-size:14px;
 }
 
-footer strong {
-    color: #d4af37;
+footer strong{
+    color:#d4af37;
 }
 
 /* MOBILE */
 
-@media (max-width: 800px) {
+@media(max-width:900px){
 
-    .nav {
-        flex-direction: column;
-        gap: 15px;
+    header{
+        padding:20px 5%;
     }
 
-    nav a {
-        margin: 0 7px;
-        font-size: 12px;
+    nav{
+        display:none;
     }
 
-    .hero {
-        min-height: 520px;
+    .hero{
+        padding:120px 6% 70px;
+        min-height:90vh;
     }
 
-    .beast {
-        font-size: 55px;
+    .hero h1{
+        font-size:48px;
     }
 
-    .hero h1 {
-        font-size: 38px;
-        letter-spacing: 2px;
+    .hero p{
+        font-size:17px;
     }
 
-    .hero h2 {
-        font-size: 18px;
+    section{
+        padding:70px 6%;
     }
 
-    .tips {
-        grid-template-columns: 1fr;
+    .cards{
+        grid-template-columns:1fr;
     }
 
-    .stats {
-        grid-template-columns: repeat(2, 1fr);
+    .premium-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .premium-image img{
+        height:400px;
+    }
+
+    .premium-text h2{
+        font-size:38px;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .cta h2{
+        font-size:38px;
+    }
+
+    .phone{
+        font-size:30px;
+    }
+}
+
+@media(max-width:500px){
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        text-align:center;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2{
+        font-size:34px;
     }
 }
 </style>
@@ -326,238 +468,54 @@ footer strong {
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 
-<div class="nav">
+    <div class="logo">
+        PREMIUM<span>MONTAŽA</span>
+    </div>
 
-<div class="logo">
-🦁 THE BEAST TIPSTER
-</div>
-
-<nav>
-<a href="#pocetna">Početna</a>
-<a href="#tipovi">Tipovi</a>
-<a href="#vip">VIP</a>
-<a href="#statistika">Statistika</a>
-<a href="#kontakt">Kontakt</a>
-</nav>
-
-</div>
+    <nav>
+        <a href="#storitve">Storitve</a>
+        <a href="#prednosti">Prednosti</a>
+        <a href="#postopek">Postopek</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
 
 </header>
 
 
-<!-- POČETNA -->
+<!-- HERO -->
 
-<section class="hero" id="pocetna">
+<section class="hero">
 
-<div>
+    <div class="hero-content">
 
-<div class="beast">🦁</div>
-
-<h1>
-THE <span class="gold">BEAST</span> TIPSTER
-</h1>
-
-<h2>
-ZVANIČNA STRANICA
-</h2>
-
-<p>
-Dobrodošli na The Beast Tipster.
-Pratite naše fudbalske selekcije, statistiku i premium VIP tipove.
-</p>
-
-<a class="button" href="#tipovi">
-POGLEDAJ DANAŠNJE TIPOVE
-</a>
-
-</div>
-
-</section>
-
-
-<!-- TIPOVI -->
-
-<section class="container" id="tipovi">
-
-<h2 class="section-title">
-🔥 DANAŠNJI TIPOVI
-</h2>
-
-<p class="section-subtitle">
-Najnovije selekcije The Beast Tipster tima
-</p>
-
-
-<div class="tips">
-
-
-<div class="card">
-
-<div class="card-top">
-<span class="sport">⚽ FUDBAL</span>
-<span class="status">● AKTIVNO</span>
-</div>
-
-<div class="match">
-Tim A vs Tim B
-</div>
-
-<div class="info">
-🕐 Vreme: 20:45
-</div>
-
-<div class="prediction">
-<p>Predlog:</p>
-<strong>VIŠE OD 2.5 GOLOVA</strong>
-</div>
-
-<div class="odds">
-📈 Koeficijent: 1.80
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-top">
-<span class="sport">⚽ FUDBAL</span>
-<span class="status">● AKTIVNO</span>
-</div>
-
-<div class="match">
-Tim C vs Tim D
-</div>
-
-<div class="info">
-🕐 Vreme: 21:00
-</div>
-
-<div class="prediction">
-<p>Predlog:</p>
-<strong>POBEDA DOMAĆINA</strong>
-</div>
-
-<div class="odds">
-📈 Koeficijent: 1.75
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-top">
-<span class="sport">⚽ FUDBAL</span>
-<span class="status">● AKTIVNO</span>
-</div>
-
-<div class="match">
-Tim E vs Tim F
-</div>
-
-<div class="info">
-🕐 Vreme: 21:30
-</div>
-
-<div class="prediction">
-<p>Predlog:</p>
-<strong>OBA TIMA DAJU GOL</strong>
-</div>
-
-<div class="odds">
-📈 Koeficijent: 1.70
-</div>
-
-</div><!-- PONUDA -->
-
-<section class="container" id="ponuda">
-
-    <h2 class="section-title">
-        🎯 IZABERI SVOJU OPCIJU
-    </h2>
-
-    <p class="section-subtitle">
-        Izaberi pojedinačnu prognozu ili kompletan VIP pristup
-    </p>
-
-    <div class="tips">
-
-        <!-- OBIČNA PROGNOZA -->
-
-        <div class="card">
-
-            <div style="text-align:center; font-size:45px;">
-                🎯
-            </div>
-
-            <h2 style="text-align:center; color:#d4af37; margin:15px 0;">
-                OBIČNA PROGNOZA
-            </h2>
-
-            <p style="text-align:center; color:#aaa;">
-                Želiš prognozu samo za jednu utakmicu?
-            </p>
-
-            <div style="text-align:center; margin:25px 0;">
-                <span style="font-size:38px; font-weight:bold; color:#d4af37;">
-                    2 €
-                </span>
-                <span style="color:#aaa;">
-                    / prognoza
-                </span>
-            </div>
-
-            <p>✓ Jedna izabrana utakmica</p>
-            <p>✓ Naša prognoza</p>
-            <p>✓ Koeficijent</p>
-
-            <div style="text-align:center;">
-                <a class="button" href="#">
-                    USKORO DOSTUPNO
-                </a>
-            </div>
-
+        <div class="small-title">
+            LJUBLJANA IN OKOLICA
         </div>
 
+        <h1>
+            PREMIUM<br>
+            MONTAŽA <span>OKEN IN VRAT</span>
+        </h1>
 
-        <!-- VIP -->
+        <p>
+            Profesionalna montaža PVC in ALU oken,
+            vhodnih in notranjih vrat ter komarnikov.
+            Natančna izvedba za popoln videz vašega doma.
+        </p>
 
-        <div class="card" style="border-color:#d4af37;">
+        <div class="buttons">
 
-            <div style="text-align:center; font-size:45px;">
-                👑
-            </div>
+            <a class="btn btn-gold" href="tel:069746529">
+                📞 POKLIČITE NAS
+            </a>
 
-            <h2 style="text-align:center; color:#d4af37; margin:15px 0;">
-                BEAST VIP
-            </h2>
-
-            <p style="text-align:center; color:#aaa;">
-                Kompletan pristup našim VIP selekcijama.
-            </p>
-
-            <div style="text-align:center; margin:25px 0;">
-                <span style="font-size:38px; font-weight:bold; color:#d4af37;">
-                    15 €
-                </span>
-                <span style="color:#aaa;">
-                    / mesečno
-                </span>
-            </div>
-
-            <p>✓ VIP dnevne selekcije</p>
-            <p>✓ Premium prognoze</p>
-            <p>✓ Statistika rezultata</p>
-            <p>✓ Prethodni dobitni tipovi</p>
-
-            <div style="text-align:center;">
-                <a class="button" href="#">
-                    POSTANI VIP
-                </a>
-            </div>
+            <a class="btn btn-outline" href="#storitve">
+                OGLEJTE STORITVE
+            </a>
 
         </div>
 
@@ -566,99 +524,137 @@ Tim E vs Tim F
 </section>
 
 
-</div>
+<!-- SERVICES -->
 
-</section>
+<section class="services" id="storitve">
 
+    <div class="section-title">
 
+        <div class="gold">
+            NAŠE STORITVE
+        </div>
 
+        <h2>
+            Kakovost, ki se vidi.
+        </h2>
 
-<h2>BEAST VIP</h2>
+        <p>
+            Nudimo profesionalno montažo za stanovanja,
+            hiše in poslovne prostore.
+        </p>
 
-<p>
-Premium selekcije za članove The Beast VIP zajednice.
-Dobijajte posebne tipove, analize i ekskluzivne selekcije.
-</p>
-
-<a class="button" href="#kontakt">
-PRIDRUŽI SE VIP
-</a>
-
-</div>
-
-</section>
-
-
-<!-- STATISTIKA -->
-
-<section class="container" id="statistika">
-
-<h2 class="section-title">
-📊 STATISTIKA
-</h2>
-
-<p class="section-subtitle">
-Rezultati The Beast Tipster selekcija
-</p>
+    </div>
 
 
-<div class="stats">
-
-<div class="stat">
-<div class="stat-number">--%</div>
-<div class="stat-name">Uspešnost</div>
-</div>
-
-<div class="stat">
-<div class="stat-number">--</div>
-<div class="stat-name">Ukupno tipova</div>
-</div>
-
-<div class="stat">
-<div class="stat-number">--</div>
-<div class="stat-name">Dobitni tipovi</div>
-</div>
-
-<div class="stat">
-<div class="stat-number">--</div>
-<div class="stat-name">Profit</div>
-</div>
-
-</div>
-
-</section>
+    <div class="cards">
 
 
-<!-- KONTAKT -->
+        <div class="card">
 
-<section class="container contact" id="kontakt">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=90">
+            </div>
 
-<h2 class="section-title">
-📩 KONTAKT
-</h2>
+            <div class="card-content">
 
-<p>
-Za VIP članstvo i dodatne informacije kontaktirajte The Beast Tipster.
-</p>
+                <h3>PVC <span>OKNA</span></h3>
 
-<a class="button" href="#">
-KONTAKTIRAJ NAS
-</a>
+                <p>
+                    Sodobna PVC okna z odlično izolacijo
+                    in profesionalno montažo.
+                </p>
 
-</section>
+            </div>
+
+        </div>
 
 
-<footer>
+        <div class="card">
 
-<p>
-© 2026 <strong>THE BEAST TIPSTER</strong>
-</p>
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=90">
+            </div>
 
-<p>
-Zvanična stranica • Fudbalske selekcije
-</p>
+            <div class="card-content">
 
-</footer>
+                <h3>ALU <span>OKNA</span></h3>
 
-</body>
-</html>
+                <p>
+                    Moderna aluminijasta okna za eleganten
+                    in sodoben videz objekta.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=90">
+            </div>
+
+            <div class="card-content">
+
+                <h3>VHODNA <span>VRATA</span></h3>
+
+                <p>
+                    Elegantna in varna vhodna vrata
+                    z natančno izvedeno montažo.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=90">
+            </div>
+
+            <div class="card-content">
+
+                <h3>NOTRANJA <span>VRATA</span></h3>
+
+                <p>
+                    Montaža notranjih oziroma sobnih vrat
+                    za moderen videz vašega doma.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1000&q=90">
+            </div>
+
+            <div class="card-content">
+
+                <h3><span>KOMARNIKI</span></h3>
+
+                <p>
+                    Praktična zaščita pred insekti
+                    za okna in vrata.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=90">
+            </div>
+
+            <div class="card-content">
+
+                <h3>PROFESIONALNA <span>MONTAŽA</
